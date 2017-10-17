@@ -1,0 +1,27 @@
+:root {
+  --rowNum: 32;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(var(--rowNum), 1fr);
+  grid-template-rows: repeat(var(--rowNum), 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  width: 600px;
+  height: 600px;
+  align-content: center;
+  margin: 50px auto;
+  border: 1px solid black;
+  background: black;
+}
+
+.cell {
+  background-color: white;
+  width: auto;
+  height: auto;
+}
+
+.pressed {
+  background-color: red;
+}
