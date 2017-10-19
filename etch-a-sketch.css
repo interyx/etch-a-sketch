@@ -1,27 +1,38 @@
 :root {
-  --rowNum: 32;
+  --gridLength: 16;
+}
+
+body {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #wrapper {
   display: grid;
-  grid-template-columns: repeat(var(--rowNum), 1fr);
-  grid-template-rows: repeat(var(--rowNum), 1fr);
+  grid-template-columns: repeat(var(--gridLength), 1fr);
+  grid-template-rows: repeat(var(--gridLength), 1fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
   width: 600px;
   height: 600px;
   align-content: center;
   margin: 50px auto;
+  margin-bottom: 10px;
   border: 1px solid black;
   background: black;
 }
 
+#buttons {
+  text-align: center;
+}
+
 .cell {
-  background-color: white;
+  background-color: #666;
   width: auto;
   height: auto;
 }
 
 .pressed {
-  background-color: red;
+  background-color: #ce0e0e;
 }
